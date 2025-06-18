@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body{
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      width: 100%;
+      z-index: 999;
+      transition: background 0.3s ease;
+      background: #111;
+    }
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+    }
+    .navbar-brand img {
+      height: 35px;
+      margin-right: 10px;
+    }
+       .navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+  color: white !important;
+  font-size: 18px !important;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+    .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .dropdown-toggle.show {
+  color: gold !important;
+}
+    .dropdown-menu {
+      background-color: #222;
+    }
+ .dropdown-menu {
+  background-color: #111 !important;
+  border: none;
+  padding: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.dropdown-item {
+  color: white !important;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #111;
+  border-bottom: 1px solid #222;
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #222;
+  color: gold !important;
+}
+    .dropdown-item:hover {
+      background-color: #333;
+      color: gold;
+    }
+    .search-icon {
+      color: white;
+      font-size: 1.2rem;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+       .footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 60px 0 20px;
+    }
+    .footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+    .footer .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .social-icons a {
+      color: #fff;
+      margin-right: 15px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: gold;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+   .footer-img-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.footer-img-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+    .footer-img-grid .row > div {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .list-unstyled li a:hover{
+      color: gold;
+    }
+    .footer .contact-info p {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.footer .contact-info p:hover {
+  transform: translateX(5px);
+  color: gold;
+}
+.contact-hero {
+      background-image: url('https://patiotime.loftocean.com/wp-content/uploads/2022/03/alaksiej-carankievic-JBDYs80RTcs-unsplash.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+    .contact-hero h1 {
+      position: relative;
+      color: white;
+      font-size: 64px;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #d3a86f;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+    .main-heading {
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 1.3;
+      margin-bottom: 30px;
+    }
+    .description {
+      font-size: 17px;
+      color: #ccc;
+      line-height: 1.9;
+      max-width: 600px;
+    }
+   .about-image {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+  .full-image-container {
+      width: 100%;
+      height: 100vh;
+      background-image: url('https://rolanda.qodeinteractive.com/wp-content/uploads/2024/09/gallery-img-18.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 5%;
+    }
+      .section-label {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #c8a14d;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .section-titl {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .section-content {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+    .row + .row {
+      margin-top: 100px;
+    }
+       .hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.label {
+      color: #d3a86f;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .chef-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .section-heading {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .section-description {
+      font-size: 16px;
+      color: #999;
+      line-height: 1.8;
+    }
+    .chef-img{
+      height: 670px;
+    }
+    .chef-img, .restaurant-img {
+      width: 100%;
+
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .caption {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<header class="transparent" id="mainHeader">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/chef-hat.png" alt="logo">
+        Delicious
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+              Home
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About 1</a></li>
+              <li><a class="dropdown-item" href="about2.html">About 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="reservationDropdown" role="button" data-bs-toggle="dropdown">
+              Reservation
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="reservationDropdown">
+              <li><a class="dropdown-item" href="Reservation.html">Reservation 1</a></li>
+              <li><a class="dropdown-item" href="Reservation2.html">Reservation 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown">
+              Gallery
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+              <li><a class="dropdown-item" href="Gallery.html">Gallery 1</a></li>
+              <li><a class="dropdown-item" href="Gallery2.html">Gallery 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+              <li><a class="dropdown-item" href="menu.html">Menu 1</a></li>
+              <li><a class="dropdown-item" href="menu2.html">Menu 2</a></li>
+            </ul>
+          </li>
+
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-bs-toggle="dropdown">
+              Team
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="teamDropdown">
+              <li><a class="dropdown-item" href="team.html">Team 1</a></li>
+              <li><a class="dropdown-item" href="team2.html">Team 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+              Contact
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+              <li><a class="dropdown-item" href="./contact.html">Contact 1</a></li>
+              <li><a class="dropdown-item" href="./contact2.html">Contact 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link search-icon" href="#"><i class="fas fa-search text-white"></i></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="contact-hero">
+    <h1>About US</h1>
+  </section>
+
+<div class="container">
+    <div class="row align-items-center slide-up-element">
+      <div class="col-lg-6 mb-5">
+        <div class="section-title">We are Delicious</div>
+        <h1 class="main-heading">
+          For those who believe in leaving a mark, be one step closer to excellence. Be creative.
+        </h1>
+        <p class="description">
+          Welcome to Delicious, where passion for food meets exceptional dining experience...
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://demo.gloriathemes.com/bouffe/demo/wp-content/uploads/2021/01/about-restaurant.jpg" alt="Bouffe Restaurant" class="about-image">
+      </div>
+    </div>
+  </div>
+
+  <div class="full-image-container slide-up-element"></div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row align-items-start slide-up-element">
+      <div class="col-md-6">
+        <div class="section-label">Our Story</div>
+        <div class="section-titl">Innovation in every step</div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-content">      
+Delicious, a culinary adventure born out of passion. From humble beginnings to becoming a gastronomic haven, we’ve been on a relentless pursuit of crafting extraordinary flavors and creating memorable dining experiences. Join us as we celebrate the art of food and embark on a journey that will tantalize your taste buds.
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-start slide-up-element">
+      <div class="col-md-6">
+        <div class="section-label">Our Mission</div>
+        <div class="section-titl">Awareness or deterrence</div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-content">    
+At Delicious, our mission is to redefine the dining experience. We strive to delight our guests with innovative flavors, impeccable service, and a welcoming atmosphere. We are committed to sourcing the freshest ingredients, supporting local communities, and creating moments of culinary bliss that leave a lasting impression.
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-start slide-up-element">
+      <div class="col-md-6">
+        <div class="section-label">Our Vision</div>
+        <div class="section-titl">A unique idea always wins</div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-content">
+       
+Our vision at Delicious is to be the epitome of culinary excellence. We aim to inspire and captivate food lovers with our creative dishes, impeccable presentation, and unparalleled service. We envision a dining destination where every guest leaves with a sense of culinary discovery, eager to share their extraordinary experience with others.
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container slide-up-element">
+    <div class="row g-5 align-items-start mt-5">
+      <div class="col-md-6 text-center">
+        <div class="label">Master Chef</div>
+        <div class="chef-name">Petro William</div>
+        <img src="https://demo.gloriathemes.com/bouffe/demo/wp-content/uploads/2021/01/about-master-cheff.jpg" alt="Chef" class="chef-img mb-3">
+        <div class="caption">Feel the extraordinary love with our <br>dishes. We have millions of flavors.</div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="label">Delicious Restaurant</div>
+        <div class="section-heading">Luxury restaurant, luxurious environment. Now it’s time to eat something special.</div>
+        <p class="section-description">
+          A culinary haven where passion and flavors unite. With a commitment to exceptional dining experiences, we showcase the art of gastronomy through carefully crafted dishes using the finest ingredients. Immerse yourself in our warm ambiance, impeccable service, and diverse menu inspired by global cuisines. Join us as we invite you to indulge in a remarkable culinary journey that will leave you with unforgettable memories.
+        </p>
+        <img src="https://demo.gloriathemes.com/bouffe/demo/wp-content/uploads/2021/01/about-restaurant.jpg" alt="Restaurant" class="restaurant-img mt-4">
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-3 mb-4">
+        <div class="logo">Delicious</div>
+        <p class="mt-3">Delicious food delivered hot and fresh to your doorstep. Experience the taste of happiness!</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4 contact-info">
+  <h5 class="mb-3">Contact Us</h5>
+  <p><i class="fas fa-map-marker-alt me-2"></i>123 Food Street, Flavor Town, India</p>
+  <p><i class="fas fa-phone me-2"></i>+91 98765 4321</p>
+  <p><i class="fas fa-envelope me-2"></i>contact@Delicious.com</p>
+</div>
+
+
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Gallery</h5>
+        <div class="footer-img-grid">
+          <div class="row g-2">
+            <div class="col-6">
+              <img src="./hero1.jpg" alt="Food 1">
+            </div>
+            <div class="col-6">
+              <img src="./hero2.jpg" alt="Food 2">
+            </div>
+            <div class="col-6">
+              <img src="./hero3.jpg" alt="Food 3">
+            </div>
+            <div class="col-6">
+              <img src="https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?uid=R203151179&ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740" alt="Food 4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom mt-4">
+      &copy; 2025 FoodieZone. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const elements = document.querySelectorAll('.slide-up-element');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    elements.forEach(el => {
+      el.classList.add('hidden');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

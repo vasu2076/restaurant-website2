@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body{
+      background-color: #111 !important;
+      color: #fff;
+    }
+    header {
+      width: 100%;
+      z-index: 999;
+      transition: background 0.3s ease;
+      background: #111;
+    }
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+    }
+    .navbar-brand img {
+      height: 35px;
+      margin-right: 10px;
+    }
+       .navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+  color: white !important;
+  font-size: 18px !important;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+    .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .dropdown-toggle.show {
+  color: gold !important;
+}
+    .dropdown-menu {
+      background-color: #222;
+    }
+ .dropdown-menu {
+  background-color: #111 !important;
+  border: none;
+  padding: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.dropdown-item {
+  color: white !important;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #111;
+  border-bottom: 1px solid #222;
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #222;
+  color: gold !important;
+}
+    .dropdown-item:hover {
+      background-color: #333;
+      color: gold;
+    }
+    .search-icon {
+      color: white;
+      font-size: 1.2rem;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 60px 0 20px;
+    }
+    .footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+    .footer .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+   .social-icons a {
+      color: #fff;
+      margin-right: 15px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: gold;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+   .footer-img-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.footer-img-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+    .footer-img-grid .row > div {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .list-unstyled li a:hover{
+      color: gold;
+    }
+    .footer .contact-info p {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.footer .contact-info p:hover {
+  transform: translateX(5px);
+  color: gold;
+}
+.contact-hero {
+      background-image: url('https://patiotime.loftocean.com/wp-content/uploads/2022/03/alaksiej-carankievic-JBDYs80RTcs-unsplash.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+    .contact-hero h1 {
+      position: relative;
+      color: white;
+      font-size: 64px;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+    .find-us-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      gap: 50px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 20px;
+    }
+    .text-content {
+      flex: 1;
+      min-width: 320px;
+    }
+    .text-content h3 {
+      color: #d3a86f;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .text-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .text-content p {
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .info-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #aaa;
+    }
+    .info-line:hover{
+      transform: translateX(5px);
+  color: #d3a86f;  
+    }
+    .info-line i {
+      margin-right: 10px;
+      color: #d3a86f;
+    }
+    .image-content {
+      flex: 1;
+      min-width: 320px;
+    }
+    .image-content img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    @media (max-width: 768px) {
+      .find-us-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .info-line {
+        justify-content: center;
+      }
+    }
+     .text-content .btn {
+      color: #fff;
+      background-color: transparent;
+      padding: 12px 30px;
+      border: none;
+      font-weight: bold;
+      border:  3px solid #d3a86f;
+    }
+    .text-content .btn:hover{
+      background-color: #d3a86f;
+      color: #fff;
+    }
+     .contact-section {
+      display: flex;
+      justify-content: center;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-info h4 {
+      color: #d3a86f;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .contact-info p,
+    .contact-info a {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+    .contact-info strong {
+      display: block;
+      margin-top: 15px;
+    }
+    .contact-info .reservation {
+      margin-top: 30px;
+      color: #d3a86f;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #d3a86f;
+      display: inline-block;
+      padding-bottom: 3px;
+      cursor: pointer;
+    }
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      margin-top: 50px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      color: #fff !important;
+      font-size: 15px;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #d3a86f;
+    }
+    .contact-form .half {
+      display: flex;
+      gap: 20px;
+      color: #fff;
+    }
+     .contact-form .btn {
+      color: #fff;
+      background-color: transparent;
+      padding: 12px 30px;
+      border: none;
+      font-weight: bold;
+      border:  3px solid #d3a86f;
+    }
+    .contact-form .btn:hover{
+      background-color: #d3a86f;
+      color: #fff;
+    }
+    @media(max-width: 768px) {
+      .contact-form .half {
+        flex-direction: column;
+      }
+    }
+        @keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+  </style>
+  
+</head>
+<body>
+<header class="transparent " id="mainHeader">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/chef-hat.png" alt="logo">
+        Delicious
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+              Home
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About 1</a></li>
+              <li><a class="dropdown-item" href="about2.html">About 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="reservationDropdown" role="button" data-bs-toggle="dropdown">
+              Reservation
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="reservationDropdown">
+              <li><a class="dropdown-item" href="Reservation.html">Reservation 1</a></li>
+              <li><a class="dropdown-item" href="Reservation2.html">Reservation 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown">
+              Gallery
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+              <li><a class="dropdown-item" href="Gallery.html">Gallery 1</a></li>
+              <li><a class="dropdown-item" href="Gallery2.html">Gallery 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+              <li><a class="dropdown-item" href="menu.html">Menu 1</a></li>
+              <li><a class="dropdown-item" href="menu2.html">Menu 2</a></li>
+            </ul>
+          </li>
+
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="teamDropdown" role="button" data-bs-toggle="dropdown">
+              Team
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="teamDropdown">
+              <li><a class="dropdown-item" href="team.html">Team 1</a></li>
+              <li><a class="dropdown-item" href="team2.html">Team 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+              Contact
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+              <li><a class="dropdown-item" href="./contact.html">Contact 1</a></li>
+              <li><a class="dropdown-item" href="./contact2.html">Contact 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link search-icon" href="#"><i class="fas fa-search text-white"></i></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+ <section class="contact-hero">
+    <h1>CONTACT US</h1>
+  </section>
+    <section class="find-us-section">
+    <div class="text-content">
+      <h3>OUR LOCATION</h3>
+      <h2>WHERE TO FIND <span style="color: #d3a86f;">DELICIOUS</span></h2>
+      <p>The Delicious Cafe is located on Silk Street, in the heart of London city, on the edge of Soho. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+      
+      <div class="info-line"><i class="fas fa-map-marker-alt"></i>Silk St, Barbican, London EC2Y 8DS, UK</div>
+      <div class="info-line"><i class="fas fa-phone-alt"></i>+39-055-123456</div>
+      <div class="info-line"><i class="fas fa-envelope"></i>booking@delicious.com</div>
+
+      <button class="btn">View in Google Maps</button>
+    </div>
+
+    <div class="image-content">
+      <img src="https://patiotime.loftocean.com/wp-content/uploads/2022/03/rezha-ramadhan-sV8M_Lkg60Y-unsplash-550x734.jpg" alt="Delicious Restaurant">
+    </div>
+  </section>
+    <section class="contact-section">
+    <div class="contact-info">
+      <h4>Get In Touch</h4>
+      <h2>Contact Us</h2>
+      <p>For general enquiries please email: info@patiotime.com</p>
+      <p>Reserve by email: booking@patiotime.com</p>
+      <p>Tel: +39 055 1234567</p>
+      <strong>Opening hours:</strong>
+      <p>Mon – Thu: 10:00 am — 01:00 am<br>Fri – Sun: 10:00 am — 02:00 am</p>
+      <div class="reservation">Online Reservation</div>
+    </div>
+    <div class="contact-form">
+      <div class="half">
+        <input type="text" placeholder="Your name" />
+        <input type="email" placeholder="Your email" />
+      </div>
+      <input type="text" placeholder="Subject" />
+      <textarea rows="4" placeholder="Your message (optional)"></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </section>
+  <footer class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-3 mb-4">
+        <div class="logo">Delicious</div>
+        <p class="mt-3">Delicious food delivered hot and fresh to your doorstep. Experience the taste of happiness!</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4 contact-info">
+  <h5 class="mb-3">Contact Us</h5>
+  <p><i class="fas fa-map-marker-alt me-2"></i>123 Food Street, Flavor Town, India</p>
+  <p><i class="fas fa-phone me-2"></i>+91 98765 4321</p>
+  <p><i class="fas fa-envelope me-2"></i>contact@Delicious.com</p>
+</div>
+
+
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Gallery</h5>
+        <div class="footer-img-grid">
+          <div class="row g-2">
+            <div class="col-6">
+              <img src="./hero1.jpg" alt="Food 1">
+            </div>
+            <div class="col-6">
+              <img src="./hero2.jpg" alt="Food 2">
+            </div>
+            <div class="col-6">
+              <img src="./hero3.jpg" alt="Food 3">
+            </div>
+            <div class="col-6">
+              <img src="https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?uid=R203151179&ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740" alt="Food 4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom mt-4">
+      &copy; 2025 FoodieZone. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".contact-hero, .find-us-section, .contact-section");
+    sections.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("slide-up");
+      }, index * 200); // stagger effect
+    });
+  });
+</script>
+</body>
+</html>
