@@ -39,8 +39,6 @@
 .navbar-nav .dropdown-toggle.show {
   color: gold !important;
 }
-
-
     .dropdown-menu {
       background-color: #222;
     }
@@ -150,6 +148,442 @@
   transform: translateX(5px);
   color: gold;
 }
+   body{
+      background-color: #111;
+      color: #fff;
+    }
+    .contact-hero {
+      background-image: url('https://patiotime.loftocean.com/wp-content/uploads/2022/03/annie-spratt-TQSB-suJu1k-unsplash-4.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+    .contact-hero h1 {
+      position: relative;
+      color: white;
+      font-size: 64px;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+        .counter-title {
+      font-size: 1rem;
+      color: #d3a86f;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .counter-text {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+    }
+
+    .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    hr {
+      border-top: 1px solid #444;
+    }
+
+    .chef-heading {
+      color: #d3a86f;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .chef-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .chef-text {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+
+    .chef-img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+       transition: transform 0.6s ease;
+    }
+
+    .chef-img:hover {
+      transform: rotateY(360deg);
+    }
+
+    .chef-name {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .chef-role {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+
+    .chef-exp {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    .btn-reserve {
+      margin-top: 30px;
+      background-color: transparent;
+      border: 1px solid #d3a86f;
+      color: #fff;
+      padding: 10px 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-reserve:hover {
+      background-color: #d3a86f;
+    }
+      .hero-section {
+      background-image: url('https://patiotime.loftocean.com/wp-content/uploads/2022/03/category-bg-1.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+       .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    .menu-column {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+
+    .menu-column h3 {
+      font-size: 14px;
+      color: #d3a86f;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .menu-column h2 {
+      font-size: 28px;
+      margin: 0 0 25px;
+    }
+
+    .menu-item {
+      margin-bottom: 25px;
+    }
+
+    .menu-item-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .menu-item-desc {
+      font-size: 14px;
+      color: #999;
+      margin-top: 5px;
+    }
+
+    .menu-buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .menu-buttons button {
+      background: none;
+      border: 1px solid #d3a86f;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .menu-item:hover {
+        transform: translateX(5px);
+        color: #d3a86f;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #d3a86f;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu-column {
+        width: 100%;
+      }
+    }
+@media screen and (max-width: 407px) {
+  .menu-buttons .button {
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.map-section {
+      position: relative;
+      height: 80vh;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 50vh;
+      filter: grayscale(10%) contrast(120%);
+    }
+
+    .info-box {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease-out;
+    }
+
+    .info-box h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: bold;
+
+    }
+
+    .info-box p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      color: #111;
+      font-weight: 500;
+        transition: all 0.3s ease;
+    }
+  
+.info-item:hover {
+  transform: translateX(5px);
+  color: #d3a86f;
+}
+    .info-item i {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .info-box {
+        left: 5%;
+        right: 5%;
+        width: auto;
+        padding: 30px;
+        transform: translateY(-45%);
+      }
+    }
+     .contact-section {
+      background-color: #eae7e3;
+      border-radius: 12px;
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 60px auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      text-align: center;
+      color: #d3a86f;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: #d3a86f;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #000;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      font-size: 15px;
+      padding: 14px;
+    }
+
+    .form-control:focus {
+      border-color: #d3a86f;
+      box-shadow: 0 0 0 0.25rem rgba(211, 168, 111, 0.25);
+    }
+
+    .btn-custo {
+       color: #111;
+      background-color: transparent;
+      padding: 12px 30px;
+      border: none;
+      font-weight: bold;
+      border:  3px solid #d3a86f;
+    }
+
+    .btn-custo:hover {
+      background-color: #d3a86f;
+      color: #fff;
+    }
+    .image-stack {
+      position: relative;
+      width: max-content;
+    }
+
+    .main-img {
+      width: 500px;
+      margin-top: 25%;
+      height: 600px;
+      border-radius: 8px;
+    }
+
+    .overlay-img {
+      position: absolute;
+      left: 80px;
+      top: 10px;
+      width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtitle {
+      color: #d3a86f;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #d3a86f;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 42px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .description {
+      font-size: 18px;
+      color: #999;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn-custom {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #d3a86f;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .btn-custom:hover {
+      background-color: #d3a86f;
+    }
+
+    @media (max-width: 768px) {
+      .overlay-img {
+        width: 220px;
+         left: 50px;
+      top: 10px;
+      }
+
+      .main-img {
+        width: 250px;
+        height: 250px;
+      }
+
+      .title {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -247,6 +681,256 @@
   </nav>
 </header>
 
+ <section class="contact-hero">
+    <h1>Home</h1>
+  </section>
+
+     <div class="container mb-5 slide-up-element mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-4">
+          <div class="counter" data-target="1200">0</div>
+          <div class="counter-title">KIND DISHES & DRINKS</div>
+          <div class="counter-text">Delightful dishes and refreshing drinks crafted with kindness.</div>
+          <hr>
+        </div>
+        <div class="mb-4">
+          <div class="counter" data-target="3170">0</div>
+          <div class="counter-title">GLORIOUS DAYS</div>
+          <div class="counter-text">Experience glorious days with exquisite flavors and remarkable moments.</div>
+          <hr>
+        </div>
+        <div class="mb-4">
+          <div class="counter" data-target="9180">0</div>
+          <div class="counter-title">SPECIAL ORDER</div>
+          <div class="counter-text">Customize your culinary desires with our special order service.</div>
+        </div>
+        <div class="mt-4">
+          <img src="https://demo.gloriathemes.com/bouffe/demo/wp-content/uploads/2021/01/about-2-512x472.jpg" alt="chefs in kitchen" class="img-fluid rounded">
+          <p class="text-muted mt-3" style="color:#999 !important; margin-left: 20% !important;">Good times count in good restaurants.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="chef-heading">OUR CHEFS</div>
+        <div class="chef-title">The best chefs of the kitchen are always here. We never compromise with our service and quality.</div>
+        <p class="chef-text">Our talented chefs are the heart and soul of Bouffe, bringing their passion and expertise to every plate. With culinary artistry and innovation, they create extraordinary dishes that ignite the senses and elevate your dining experience.</p>
+
+        <div class="row text-center text-md-start">
+          <div class="col-6 mb-4">
+            <img src="https://savory.qodeinteractive.com/wp-content/uploads/2016/10/left-menu-team1-550x550.jpg" class="chef-img" alt="">
+            <p class="chef-name">ALEX MORGAN</p>
+            <p class="chef-role">EXECUTIVE CHEF</p>
+            <p class="chef-exp">23 years of experience and 6 years of international experience.</p>
+          </div>
+          <div class="col-6 mb-4">
+            <img src="https://savory.qodeinteractive.com/wp-content/uploads/2016/10/left-menu-team2-550x550.jpg" class="chef-img" alt="">
+            <p class="chef-name">EMILY PARKER</p>
+            <p class="chef-role">SOUS CHEF</p>
+            <p class="chef-exp">15 years of experience and 3 years of international experience.</p>
+          </div>
+          <div class="col-6 mb-4">
+            <img src="https://savory.qodeinteractive.com/wp-content/uploads/2016/10/left-menu-team3-550x550.jpg" class="chef-img" alt="">
+            <p class="chef-name">RAHUL VERMA</p>
+            <p class="chef-role">GRILL MASTER</p>
+            <p class="chef-exp">10 years of experience and 2 years of international experience.</p>
+          </div>
+          <div class="col-6 mb-4">
+            <img src="https://savory.qodeinteractive.com/wp-content/uploads/2016/10/left-menu-team4-550x550.jpg" class="chef-img" alt="">
+            <p class="chef-name">SOPHIA LANE</p>
+            <p class="chef-role">PASTRY ARTIST</p>
+            <p class="chef-exp">5 years of experience and 6 months of international experience.</p>
+          </div>
+        </div>
+        <button class="btn btn-reserve">RESERVATION</button>
+      </div>
+    </div>
+  </div>
+
+      <section class="hero-section">
+    <div class="hero-content">
+    
+    </div>
+  </section>
+
+   <div class="row mt-5 slide-up-element">
+    <div class="menu-column slide-up-element">
+      <h3>Breakfast & Brunch</h3>
+      <h2>Pancakes & Brunches</h2>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Chocolate Pancakes</span><span>$ 65</span></div>
+        <div class="menu-item-desc">Rich chocolate pancakes perfect for your sweet vegetarian craving.</div>
+      </div>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Strawberry Pancakes</span><span>$ 55</span></div>
+        <div class="menu-item-desc">Juicy strawberries layered over soft, spongy pancakes.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Breakfast Bowl</span><span>$115</span></div>
+        <div class="menu-item-desc">A healthy combo of oats, fruits, yogurt, and nuts.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Classic Brunch Menu</span><span>$ 120</span></div>
+        <div class="menu-item-desc">Grilled tomatoes, mushrooms, scrambled tofu and toast.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>American Brunch Plate</span><span>$ 145</span></div>
+        <div class="menu-item-desc">Baked beans, sautéed greens, toast and avocado dip.</div>
+      </div>
+    </div>
+
+    <div class="menu-column slide-up-element">
+      <h3>Dinner & Lunch</h3>
+      <h2>Indian & Continental Vegetarian Dishes</h2>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Paneer Butter Masala</span><span>$180</span></div>
+        <div class="menu-item-desc">Creamy tomato-based curry with soft paneer cubes and rich spices.</div>
+      </div>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Veg Biryani </span><span>$160</span></div>
+        <div class="menu-item-desc">Served medium rare, salad, mushroom sauce.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>  Butter Naan </span><span>$ 45</span></div>
+        <div class="menu-item-desc">Soft tandoori naan brushed with melted butter.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span> Jeera Rice</span><span>$ 100</span></div>
+        <div class="menu-item-desc">Aromatic basmati rice tempered with cumin and ghee.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span> Tadka Dal </span><span>$ 110</span></div>
+        <div class="menu-item-desc">Yellow lentils tempered with ghee, garlic, cumin, and red chilies for bold flavor.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row slide-up-element">
+    <div class="menu-column slide-up-element">
+      <h3>Desserts</h3>
+      <h2>Sweets</h2>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Gulab Jamun</span><span>$ 60</span></div>
+        <div class="menu-item-desc">Soft, deep-fried milk balls soaked in rose-flavored sugar syrup.</div>
+      </div>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Rasmalai</span><span>$ 75</span></div>
+        <div class="menu-item-desc">Cottage cheese dumplings soaked in saffron-infused sweet milk.</div>
+      </div>
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Kesar Peda</span><span>$ 50</span></div>
+        <div class="menu-item-desc">Traditional milk-based sweet flavored with saffron and cardamom..</div>
+      </div>
+    </div>
+
+    <div class="menu-column slide-up-element">
+      <h3>Cold Drinks</h3>
+      <h2>Refreshing Beverages</h2>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Mango Lassi</span><span>$ 70</span></div>
+        <div class="menu-item-desc">A refreshing blend of yogurt, ripe mango, sugar and a hint of cardamom.</div>
+      </div>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Cold Coffee</span><span>$ 80</span></div>
+        <div class="menu-item-desc">Classic iced coffee with milk, sugar and chilled delight in every sip.</div>
+      </div>
+
+      <div class="menu-item slide-up-element">
+        <div class="menu-item-title"><span>Rose Milk</span><span>$ 45</span></div>
+        <div class="menu-item-desc">Chilled milk blended with rose syrup, perfect for summer refreshment.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-buttons slide-up-element">
+    <button class="button slide-up-element">BROWSE MENUS</button>
+    <button class="mb-5 button slide-up-element">ORDER ONLINE</button>
+  </div>
+
+  <div class="container py-5 slide-up-element">
+    <div class="row align-items-center justify-content-between g-5">
+      
+      <div class="col-md-6 text-center text-md-start">
+        <div class="image-stack mx-auto mx-md-0">
+          <img src="https://patiotime.loftocean.com/wp-content/uploads/2022/03/klara-kulikova-gXmCinze3k8-unsplash-550x825.jpg" class="main-img" alt="Dining">
+          <img src="https://patiotime.loftocean.com/wp-content/uploads/2022/03/chef-1-768x960.jpg" class="overlay-img" alt="Chef">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="subtitle">QUALITY & BALANCE</div>
+        <h2 class="title">OUR FOOD <br>PHILOSOPHY</h2>
+        <p class="description">
+          Simple and balanced. Alexander Petillo brings together flavors <br>and specialties from Italy and beyond to create his own <br>culinary world, full of surprising artistry.
+        </p>
+        <button class="btn btn-custom">Learn More</button>
+      </div>
+
+    </div>
+  </div>
+
+       <section class="map-section slide-up-element">
+ <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717101.230616933!2d73.11851608868748!3d20.593684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be06a93d154045b%3A0x18b4a20a7cf9c352!2sIndia!5e0!3m2!1sen!2sin!4v1718536338473!5m2!1sen!2sin" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+ <div class="info-box">
+  <h3>Find Delicious Lounge</h3>
+  <p>Experience the authentic taste of India in the heart of India. Enjoy a cozy ambiance, delightful cuisine, and world-class service at Delicious Lounge.</p>
+
+    <div class="info-item">
+      <i class="fas fa-phone-alt"></i> +91 98765 4321
+    </div>
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt"></i> 123 Food Street, Flavor Town, India
+    </div>
+    <div class="info-item">
+      <i class="fas fa-envelope"></i> contact@Delicious.com
+    </div>
+  </div>
+</section>
+
+  <section class="contact-section slide-up-element">
+    <div class="section-title">KEEP IN TOUCH</div>
+    <h2 class="section-heading">Send us a Massage</h2>
+    <form>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Name" required />
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Email*" required />
+        </div>
+        <div class="col-md-6">
+          <input type="tel" class="form-control" placeholder="Phone" />
+        </div>
+      </div>
+      <div class="mt-3">
+        <textarea class="form-control" placeholder="Your Message *" rows="6" required></textarea>
+      </div>
+      <div class="mt-4">
+        <button type="submit" class="btn btn-custo">
+          <i class="fas fa-paper-plane me-2"></i> Get In Touch
+        </button>
+      </div>
+    </form>
+  </section>
+
+ 
+
  <footer class="footer">
   <div class="container">
     <div class="row text-center text-md-start">
@@ -306,7 +990,53 @@
   </div>
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+       const counters = document.querySelectorAll('.counter');
+    const speed = 100;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCount();
+            observer.unobserve(counter);
+          }
+        });
+      }, { threshold: 0.7 });
+
+      observer.observe(counter);
+    });
+    const elements = document.querySelectorAll('.slide-up-element');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    elements.forEach(el => {
+      el.classList.add('hidden');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
