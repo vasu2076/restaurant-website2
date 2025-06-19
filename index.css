@@ -412,6 +412,12 @@
       border-bottom: 1px dotted #444;
       text-align: left;
     }
+ .menu-row:hover strong{
+      color: #d3a86f;
+    }
+    .menu-row:hover .menu-price{
+      color: #fff;
+    }
 
     .menu-left {
       max-width: 70%;
