@@ -273,12 +273,8 @@
       background-attachment: fixed;
       height: 50vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
     }
-       .row {
+       .menu {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -521,9 +517,16 @@
       background-color: #d3a86f;
       color: #fff;
     }
+       .section-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
     .image-stack {
       position: relative;
       width: max-content;
+      margin: 0 auto;
     }
 
     .main-img {
@@ -540,6 +543,10 @@
       width: 500px;
       border-radius: 8px;
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .text-content {
+      text-align: center;
     }
 
     .subtitle {
@@ -572,10 +579,12 @@
       font-weight: bold;
       text-transform: uppercase;
     }
-    .btn-custom a{
+
+    .btn-custom a {
       text-decoration: none;
       color: #fff;
     }
+
     .btn-custom:hover {
       background-color: #d3a86f;
     }
@@ -583,8 +592,8 @@
     @media (max-width: 768px) {
       .overlay-img {
         width: 220px;
-         left: 50px;
-      top: 10px;
+        left: 50px;
+        top: 10px;
       }
 
       .main-img {
@@ -594,6 +603,18 @@
 
       .title {
         font-size: 32px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .section-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .text-content {
+        text-align: left;
       }
     }
   </style>
@@ -765,7 +786,7 @@
     </div>
   </section>
 
-   <div class="row mt-5 slide-up-element">
+   <div class="row mt-5 slide-up-element menu">
     <div class="menu-column slide-up-element">
       <h3>Breakfast & Brunch</h3>
       <h2>Pancakes & Brunches</h2>
@@ -821,7 +842,7 @@
     </div>
   </div>
 
-  <div class="row slide-up-element">
+  <div class="row slide-up-element menu">
     <div class="menu-column slide-up-element">
       <h3>Desserts</h3>
       <h2>Sweets</h2>
@@ -867,17 +888,16 @@
     <button class="mb-5 button slide-up-element">ORDER ONLINE</button>
   </div>
 
-  <div class="container py-5 slide-up-element">
-    <div class="row align-items-center justify-content-between g-5">
+  <div class="container py-5 slide-up-element QUALITY">
+    <div class="section-wrapper">
       
-      <div class="col-md-6 text-center text-md-start">
-        <div class="image-stack mx-auto mx-md-0">
-          <img src="https://patiotime.loftocean.com/wp-content/uploads/2022/03/klara-kulikova-gXmCinze3k8-unsplash-550x825.jpg" class="main-img" alt="Dining">
-          <img src="https://patiotime.loftocean.com/wp-content/uploads/2022/03/chef-1-768x960.jpg" class="overlay-img" alt="Chef">
-        </div>
+      <div class="image-stack">
+        <img src="./overlay-img1.jpg" class="main-img" alt="Dining">
+        <img src="./overlay-img2.jpg" class="overlay-img" alt="Chef">
       </div>
 
-      <div class="col-md-6">
+      <!-- Text -->
+      <div class="text-content">
         <div class="subtitle">QUALITY & BALANCE</div>
         <h2 class="title">OUR FOOD <br>PHILOSOPHY</h2>
         <p class="description">
